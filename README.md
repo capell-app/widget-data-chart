@@ -35,21 +35,46 @@ Screenshot contract: `docs/screenshots.json`.
 
 ![Data Chart Widget extension card](docs/screenshots/extension-card.svg)
 
-![Data Chart fields in Layout Builder](docs/screenshots/data-chart-layout-builder-editor.png)
+![Illustrative data chart public output preview](docs/screenshots/data-chart-public-output.png)
 
-- Data Chart Widget extension card (marketplace, required).
-- Data Chart fields in Layout Builder (admin, optional).
-- Data Chart public output (frontend, optional).
+- Data Chart Widget extension card (marketplace, required evidence).
+- Data Chart fields in Layout Builder (admin, supplementary evidence).
+- Illustrative data chart public output preview (frontend, required evidence).
+- Data Chart fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
 
 ## Technical Shape
 
-- Service providers: `Capell\WidgetDataChart\Providers\WidgetDataChartServiceProvider`.
-- Filament classes: `DataChartWidget`.
-- Data objects: `ChartPointData`, `ChartSeriesData`, `DataChartInputData`, `DataChartRenderData`.
-- Manifest contributions: `content-widget: Capell\WidgetDataChart\WidgetDataChartContribution`.
-- Health checks: `Capell\WidgetDataChart\Health\WidgetDataChartHealthCheck`.
-- Blade views: `packages/widget-data-chart/resources/views/widget.blade.php`.
-- Cache tags: `widget-data-chart`.
+### Service providers
+
+- `Capell\WidgetDataChart\Providers\WidgetDataChartServiceProvider`
+
+### Filament classes
+
+- `DataChartWidget`
+
+### Data objects
+
+- `ChartPointData`
+- `ChartSeriesData`
+- `DataChartInputData`
+- `DataChartRenderData`
+
+### Manifest contributions
+
+- `content-widget: Capell\WidgetDataChart\WidgetDataChartContribution`
+
+### Health checks
+
+- `Capell\WidgetDataChart\Health\WidgetDataChartHealthCheck`
+
+### Blade views
+
+- `packages/widget-data-chart/resources/views/widget.blade.php`
+
+### Cache tags
+
+- `widget-data-chart`
+
 
 ## Data Model
 
@@ -60,7 +85,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 - Required packages: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
 - Admin navigation: no admin page or resource contribution is declared.
 - Admin/editor extensions: `content-widget: WidgetDataChartContribution`.
-- Permissions: none declared in `capell.json`.
+- Permissions: no package permission declarations or Shield gates detected; host access rules still apply.
 - Public routes: none declared.
 - Database changes: no package migrations declared.
 - Config: no package config files.
@@ -85,8 +110,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
-2. No package-specific setup command or migrations are declared.
-3. Open the package detail or install-intent surface and confirm the Data Chart Widget extension card is present.
+2. Open `/screenshot-fixtures/catalogue/widget-data-chart/data-chart-public-output` and confirm the public output renders without admin state.
 
 ## Next Steps
 
