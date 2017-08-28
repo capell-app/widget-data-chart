@@ -5,7 +5,7 @@
     "displayName": "Data Chart Widget",
     "kind": "package",
     "capellApiVersion": "^1.0",
-    "version": "1.x-dev",
+    "version": "1.0.0",
     "description": "Validated bar, line, and donut charts rendered as server-side SVG with an accessible HTML table.",
     "product": {
         "group": "Capell Foundation",
