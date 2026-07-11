@@ -11,7 +11,7 @@ final class WidgetDataChartHealthCheck extends AbstractWidgetExtensionHealthChec
 {
     public static function compatibleCapellApiVersion(): string
     {
-        return '^4.1';
+        return '^1.0';
     }
 
     protected static function definitionKey(): string
