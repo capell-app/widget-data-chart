@@ -12,6 +12,19 @@
     "auditReason": "The package is release-ready with honest interim Marketplace artwork; deterministic Layout Builder and public-page fixtures still need capture.",
     "entries": [
         {
+            "id": "widget-data-chart-extension-card",
+            "title": "Data Chart Widget extension card.",
+            "package": "widget-data-chart",
+            "surface": "marketplace",
+            "targetType": "marketplace-asset",
+            "target": "extension-card",
+            "required": true,
+            "path": "docs/assets/marketplace/extension-card.svg",
+            "screenshotPath": "packages/widget-data-chart/docs/screenshots/extension-card.svg",
+            "notes": "Committed Beta Marketplace card artwork for Data Chart Widget.",
+            "useCase": "A buyer reviews the Beta extension card before enabling Data Chart Widget."
+        },
+        {
             "id": "data-chart-layout-builder-editor",
             "title": "Data Chart fields in Layout Builder.",
             "package": "widget-data-chart",
