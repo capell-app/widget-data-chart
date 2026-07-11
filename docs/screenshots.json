@@ -1,0 +1,39 @@
+{
+    "package": "widget-data-chart",
+    "composerName": "capell-app/widget-data-chart",
+    "generatedFor": "deployment-screenshot-runner",
+    "requiresInstalledPackage": true,
+    "composerRequires": [
+        "capell-app/widget-data-chart",
+        "capell-app/layout-builder"
+    ],
+    "outputDirectory": "packages/widget-data-chart/docs/screenshots",
+    "auditStatus": "fixture-needed",
+    "auditReason": "The package is release-ready with honest interim Marketplace artwork; deterministic Layout Builder and public-page fixtures still need capture.",
+    "entries": [
+        {
+            "id": "data-chart-layout-builder-editor",
+            "title": "Data Chart fields in Layout Builder.",
+            "package": "widget-data-chart",
+            "surface": "admin",
+            "targetType": "admin-surface",
+            "target": "Layout Builder page editor",
+            "required": false,
+            "notes": "Capture the chart configuration and a public chart with patterns, labels, legend, and its accessible table. Capture the editor state before the page is published.",
+            "useCase": "An editor can see the fields used to configure the Data Chart widget.",
+            "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-layout-builder-editor.png"
+        },
+        {
+            "id": "data-chart-public-output",
+            "title": "Data Chart public output.",
+            "package": "widget-data-chart",
+            "surface": "frontend",
+            "targetType": "artifact",
+            "target": "Seeded public page fixture",
+            "required": false,
+            "notes": "Capture the chart configuration and a public chart with patterns, labels, legend, and its accessible table. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
+            "useCase": "An editor publishes a readable chart whose underlying values remain available to every visitor.",
+            "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-public-output.png"
+        }
+    ]
+}
