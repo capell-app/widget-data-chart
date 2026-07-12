@@ -36,7 +36,8 @@
     "contributes": [
         {
             "type": "content-widget",
-            "class": "Capell\\WidgetDataChart\\WidgetDataChartContribution"
+            "class": "Capell\\WidgetDataChart\\WidgetDataChartContribution",
+            "key": "capell-app.widget-data-chart"
         }
     ],
     "database": {
