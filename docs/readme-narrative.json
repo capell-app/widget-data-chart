@@ -1,0 +1,35 @@
+{
+    "whatThisPluginAdds": {
+        "text": "Data Chart adds a Layout Builder widget for bar, line, and donut charts. It renders server-side SVG together with an accessible data table.",
+        "evidence": [
+            "src/Data/DataChartRenderData.php",
+            "resources/views/widget.blade.php",
+            "tests/Feature/WidgetDataChartTest.php"
+        ]
+    },
+    "surfaceOutcome": {
+        "text": "Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.",
+        "evidence": [
+            "capell.json",
+            "src/Filament/DataChartWidget.php",
+            "resources/views/widget.blade.php"
+        ]
+    },
+    "whyItMatters": {
+        "developers": {
+            "text": "Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.",
+            "evidence": [
+                "src/Data/DataChartRenderData.php",
+                "src/Providers/WidgetDataChartServiceProvider.php",
+                "tests/Feature/WidgetDataChartTest.php"
+            ]
+        },
+        "teams": {
+            "text": "Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.",
+            "evidence": [
+                "resources/views/widget.blade.php",
+                "tests/Feature/WidgetDataChartTest.php"
+            ]
+        }
+    }
+}

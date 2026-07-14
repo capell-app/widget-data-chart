@@ -6,9 +6,11 @@
 
 Data Chart Widget is an **Available**, **No schema impact** Capell package in the **Capell Foundation** product group. It ships as `capell-app/widget-data-chart` and extends these surfaces: admin, frontend.
 
-Validated bar, line, and donut charts rendered as server-side SVG with an accessible HTML table.
+Data Chart adds a Layout Builder widget for bar, line, and donut charts. It renders server-side SVG together with an accessible data table.
 
-After install, admins get package-owned management surfaces and public users may see package-owned frontend output or routes.
+Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.
+
+Evidence: [`src/Data/DataChartRenderData.php`](src/Data/DataChartRenderData.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php), [`tests/Feature/WidgetDataChartTest.php`](tests/Feature/WidgetDataChartTest.php), [`capell.json`](capell.json), [`src/Filament/DataChartWidget.php`](src/Filament/DataChartWidget.php).
 
 Status details:
 
@@ -21,9 +23,11 @@ Status details:
 
 ## Why It Matters
 
-**For developers:** The package gives developers package-owned service providers, Data objects, Filament classes, and Blade views instead of pushing this behaviour into core or application code.
+**For developers:** Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.
 
-**For teams:** Server-rendered charts with patterns, labels, and accessible tables.
+**For teams:** Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.
+
+Evidence: [`src/Data/DataChartRenderData.php`](src/Data/DataChartRenderData.php), [`src/Providers/WidgetDataChartServiceProvider.php`](src/Providers/WidgetDataChartServiceProvider.php), [`tests/Feature/WidgetDataChartTest.php`](tests/Feature/WidgetDataChartTest.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php).
 
 ## Screens And Workflow
 
@@ -47,25 +51,27 @@ Screenshot contract: `docs/screenshots.json`.
 
 ## Data Model
 
-This package has no schema impact. It does not declare package-owned migrations or required tables.
-
-Docs gap: document extension points here if the package delegates persistence to a host package.
+This package has no schema impact. It extends Capell through `content-widget` contributions instead of declaring package-owned tables.
 
 ## Install Impact
 
-- Admin navigation: adds package-owned Filament classes when registered.
+- Required packages: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
+- Admin navigation: no admin page or resource contribution is declared.
+- Admin/editor extensions: `content-widget: WidgetDataChartContribution`.
 - Permissions: none declared in `capell.json`.
-- Public routes: none detected in package route files.
+- Public routes: none declared.
 - Database changes: no package migrations declared.
+- Config: no package config files.
 - Settings: no package settings declared.
-- Queues or schedules: none detected in standard package paths.
+- Queues or schedules: none declared.
 - Cache tags: `widget-data-chart`.
 - Commands: none declared.
 
 ## Common Pitfalls
 
+- Keep required Capell packages on compatible v4 releases: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
 - Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
-- Keep `composer.json`, `composer.local.json`, `capell.json`, docs, screenshots, and tests aligned when the package surface changes.
+- Custom write integrations must preserve invalidation for `widget-data-chart` cache tags.
 
 ## Troubleshooting
 
@@ -77,13 +83,14 @@ Docs gap: document extension points here if the package delegates persistence to
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
-2. Run the required setup: no package migrations are declared; clear cached config and routes if the host app uses caches.
-3. Open the related Capell admin surface and verify Data Chart Widget appears.
+2. No package-specific setup command or migrations are declared.
+3. Open the package detail or install-intent surface and confirm the Data Chart Widget extension card is present.
 
 ## Next Steps
 
 - [Package docs](docs/README.md)
 - [Overview](docs/overview.md)
+- [Troubleshooting](#troubleshooting)
 - [Screenshot contract](docs/screenshots.json)
 - [Marketplace assets](docs/assets/marketplace/)
 - [Capell content language plan](../../docs/CONTENT_LANGUAGE_PLAN.md)
