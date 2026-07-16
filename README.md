@@ -35,6 +35,8 @@ Screenshot contract: `docs/screenshots.json`.
 
 ![Data Chart Widget extension card](docs/screenshots/extension-card.svg)
 
+![Data Chart fields in Layout Builder](docs/screenshots/data-chart-layout-builder-editor.png)
+
 - Data Chart Widget extension card (marketplace, required).
 - Data Chart fields in Layout Builder (admin, optional).
 - Data Chart public output (frontend, optional).
