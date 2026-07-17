@@ -36,9 +36,7 @@
             "useCase": "An editor can see the fields used to configure the Data Chart widget.",
             "url": "/screenshot-fixtures/widgets/data-chart/editor",
             "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
-            "colorSchemes": [
-                "light"
-            ],
+            "colorSchemes": ["light"],
             "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-layout-builder-editor.png"
         },
         {
@@ -53,9 +51,7 @@
             "useCase": "An editor publishes a readable chart whose underlying values remain available to every visitor.",
             "url": "/screenshot-fixtures/widgets/data-chart/public",
             "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
-            "colorSchemes": [
-                "light"
-            ],
+            "colorSchemes": ["light"],
             "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-public-output.png"
         }
     ]
