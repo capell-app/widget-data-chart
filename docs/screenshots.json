@@ -13,6 +13,7 @@
     "entries": [
         {
             "id": "widget-data-chart-extension-card",
+            "colorSchemes": ["light"],
             "title": "Data Chart Widget extension card.",
             "package": "widget-data-chart",
             "surface": "marketplace",
@@ -41,18 +42,18 @@
         },
         {
             "id": "data-chart-public-output",
-            "title": "Data Chart public output.",
+            "title": "Illustrative data chart public output preview.",
             "package": "widget-data-chart",
             "surface": "frontend",
-            "targetType": "artifact",
-            "target": "Seeded public page fixture",
-            "required": false,
-            "notes": "Capture the chart configuration and a public chart with patterns, labels, legend, and its accessible table. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
+            "targetType": "frontend-url",
+            "target": "/screenshot-fixtures/catalogue/widget-data-chart/data-chart-public-output",
+            "required": true,
+            "notes": "Illustrative deterministic catalogue fixture, not a live package UI capture. Capture the chart configuration and a public chart with patterns, labels, legend, and its accessible table. Verify the rendered HTML contains no authoring controls, field paths, model identifiers, or signed admin URLs.",
             "useCase": "An editor publishes a readable chart whose underlying values remain available to every visitor.",
-            "url": "/screenshot-fixtures/widgets/data-chart/public",
-            "waitFor": "[data-widget-screenshot-fixture=\"public\"]",
-            "colorSchemes": ["light"],
-            "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-public-output.png"
+            "url": "/screenshot-fixtures/catalogue/widget-data-chart/data-chart-public-output",
+            "colorSchemes": ["light", "dark"],
+            "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-public-output.png",
+            "fixtureKind": "illustrative-catalogue"
         }
     ]
 }
