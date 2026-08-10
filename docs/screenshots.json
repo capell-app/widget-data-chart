@@ -54,6 +54,27 @@
             "colorSchemes": ["light", "dark"],
             "screenshotPath": "packages/widget-data-chart/docs/screenshots/data-chart-public-output.png",
             "fixtureKind": "illustrative-catalogue"
+        },
+        {
+            "id": "widget-data-chart-admin-sidebar-menu-open",
+            "title": "Data Chart fields in Layout Builder with admin sidebar menu open.",
+            "package": "widget-data-chart",
+            "surface": "admin",
+            "targetType": "admin-surface",
+            "target": "Layout Builder page editor",
+            "required": false,
+            "notes": "Capture the chart configuration and a public chart with patterns, labels, legend, and its accessible table. Capture the editor state before the page is published. Capture this same admin surface with the fully collapsible sidebar opened.",
+            "useCase": "An editor can see the fields used to configure the Data Chart widget.",
+            "url": "/screenshot-fixtures/widgets/data-chart/editor",
+            "waitFor": "[data-widget-screenshot-fixture=\"editor\"]",
+            "colorSchemes": ["light"],
+            "screenshotPath": "packages/widget-data-chart/docs/screenshots/widget-data-chart-admin-sidebar-menu-open.png",
+            "beforeWait": [
+                {
+                    "type": "click",
+                    "selector": ".fi-topbar-open-collapse-sidebar-btn"
+                }
+            ]
         }
     ]
 }
