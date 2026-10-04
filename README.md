@@ -10,8 +10,6 @@ Data Chart adds a Layout Builder widget for bar, line, and donut charts. It rend
 
 Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.
 
-Evidence: [`src/Data/DataChartRenderData.php`](src/Data/DataChartRenderData.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php), [`tests/Feature/WidgetDataChartTest.php`](tests/Feature/WidgetDataChartTest.php), [`capell.json`](capell.json), [`src/Filament/DataChartWidget.php`](src/Filament/DataChartWidget.php).
-
 Status details:
 
 - Status: Available
@@ -27,19 +25,17 @@ Status details:
 
 **For teams:** Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.
 
-Evidence: [`src/Data/DataChartRenderData.php`](src/Data/DataChartRenderData.php), [`src/Providers/WidgetDataChartServiceProvider.php`](src/Providers/WidgetDataChartServiceProvider.php), [`tests/Feature/WidgetDataChartTest.php`](tests/Feature/WidgetDataChartTest.php), [`resources/views/widget.blade.php`](resources/views/widget.blade.php).
-
 ## Screens And Workflow
 
 Screenshot contract: `docs/screenshots.json`.
 
 ![Data Chart Widget extension card](docs/screenshots/extension-card.svg)
 
-![Illustrative data chart public output preview](docs/screenshots/data-chart-public-output.png)
+![Data Chart public output](docs/screenshots/data-chart-public-output.png)
 
 - Data Chart Widget extension card (marketplace, required evidence).
 - Data Chart fields in Layout Builder (admin, supplementary evidence).
-- Illustrative data chart public output preview (frontend, required evidence).
+- Data Chart public output (frontend, required evidence).
 - Data Chart fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
 
 ## Technical Shape
@@ -110,7 +106,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
-2. Open `/screenshot-fixtures/catalogue/widget-data-chart/data-chart-public-output` and confirm the public output renders without admin state.
+2. Open the package detail or install-intent surface and confirm the Data Chart Widget extension card is present.
 
 ## Next Steps
 
@@ -123,6 +119,5 @@ This package has no schema impact. It extends Capell through `content-widget` co
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)
 - [Capell and package ERD notes](../../docs/erd/capell-and-package-erds.md)
 - Related packages: [Layout Builder](../layout-builder/README.md).
-- Focused tests: `vendor/bin/pest packages/widget-data-chart/tests --configuration=phpunit.xml`.
 
 <!-- prettier-ignore-end -->
