@@ -1,5 +1,5 @@
 .capell-data-chart {
-    color: var(--theme-text, #172033);
+    color: inherit;
 }
 .capell-data-chart__graphic {
     overflow: auto;
@@ -28,4 +28,9 @@
     .capell-data-chart * {
         animation: none !important;
     }
+}
+
+/* SVG patterns inherit this colour, including charts opened by content-reveal. */
+.dark .capell-data-chart svg {
+    color: var(--foundation-primary-action, var(--theme-primary, #1d4ed8));
 }

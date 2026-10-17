@@ -12,6 +12,7 @@ use Capell\LayoutBuilder\Providers\AbstractFoundationWidgetServiceProvider;
 use Capell\WidgetDataChart\Data\DataChartInputData;
 use Capell\WidgetDataChart\Data\DataChartRenderData;
 use Capell\WidgetDataChart\Filament\DataChartWidget;
+use Override;
 
 final class WidgetDataChartServiceProvider extends AbstractFoundationWidgetServiceProvider
 {
@@ -19,11 +20,22 @@ final class WidgetDataChartServiceProvider extends AbstractFoundationWidgetServi
 
     public static string $packageName = 'capell-app/widget-data-chart';
 
+    #[Override]
+    public function packageBooted(): void {}
+
+    #[Override]
     protected static function resourceGroup(): string
     {
         return 'capell-app.widget-data-chart';
     }
 
+    #[Override]
+    protected function bootInstalledRuntime(): void
+    {
+        $this->registerWidget();
+    }
+
+    #[Override]
     protected function definition(): WidgetExtensionDefinitionData
     {
         return new WidgetExtensionDefinitionData(key: 'capell-app.data-chart', packageName: self::$packageName, stateVersion: 1, filamentWidget: DataChartWidget::class, inputData: DataChartInputData::class, renderData: DataChartRenderData::class, fallbackView: 'capell-widget-data-chart::widget', components: ['blade' => 'capell::widgets.capell-app.data-chart'], resourceGroups: [self::resourceGroup()], defaultResourceLoadingStrategy: PresentationLoadingStrategy::Visible, capabilities: new WidgetExtensionCapabilitiesData(requiresInstanceIdentity: true, presentationCapabilities: [WidgetPresentationCapability::Width, WidgetPresentationCapability::Alignment, WidgetPresentationCapability::LoadingStrategy]));

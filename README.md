@@ -29,11 +29,11 @@ Status details:
 
 Screenshot contract: `docs/screenshots.json`.
 
-![Data Chart Widget extension card](docs/screenshots/extension-card.svg)
-
 ![Data Chart public output](docs/screenshots/data-chart-public-output.png)
 
-- Data Chart Widget extension card (marketplace, required evidence).
+![Data Chart fields in Layout Builder](docs/screenshots/data-chart-layout-builder-editor.png)
+
+- Data Chart Widget extension card (marketplace, supplementary documentation fixture).
 - Data Chart fields in Layout Builder (admin, supplementary evidence).
 - Data Chart public output (frontend, required evidence).
 - Data Chart fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
@@ -57,6 +57,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ### Manifest contributions
 
+- `asset: Capell\WidgetDataChart\WidgetDataChartContribution`
 - `content-widget: Capell\WidgetDataChart\WidgetDataChartContribution`
 
 ### Health checks
@@ -74,7 +75,7 @@ Screenshot contract: `docs/screenshots.json`.
 
 ## Data Model
 
-This package has no schema impact. It extends Capell through `content-widget` contributions instead of declaring package-owned tables.
+This package has no schema impact. It extends Capell through `asset` contributions and `content-widget` contributions instead of declaring package-owned tables.
 
 ## Install Impact
 
@@ -106,7 +107,7 @@ This package has no schema impact. It extends Capell through `content-widget` co
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
-2. Open the package detail or install-intent surface and confirm the Data Chart Widget extension card is present.
+2. Open a host admin workflow that uses the package extension and verify Data Chart Widget is available.
 
 ## Next Steps
 

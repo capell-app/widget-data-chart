@@ -38,6 +38,11 @@
             "type": "content-widget",
             "key": "capell-app.data-chart",
             "class": "Capell\\WidgetDataChart\\WidgetDataChartContribution"
+        },
+        {
+            "type": "asset",
+            "key": "resource-group:capell-app.widget-data-chart",
+            "class": "Capell\\WidgetDataChart\\WidgetDataChartContribution"
         }
     ],
     "database": {

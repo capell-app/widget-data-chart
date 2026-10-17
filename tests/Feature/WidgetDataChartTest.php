@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+
+use Capell\Core\Facades\CapellCore;
 use Capell\WidgetDataChart\Data\DataChartInputData;
 use Capell\WidgetDataChart\Data\DataChartRenderData;
 use Capell\WidgetDataChart\Health\WidgetDataChartHealthCheck;
@@ -8,6 +10,7 @@ use Capell\WidgetDataChart\Providers\WidgetDataChartServiceProvider;
 use Illuminate\Validation\ValidationException;
 
 beforeEach(function (): void {
+    CapellCore::forcePackageInstalled('capell-app/widget-data-chart');
     $this->app->register(WidgetDataChartServiceProvider::class);
 });
 it('renders safe svg and healthy surfaces', function (): void {
