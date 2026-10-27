@@ -31,5 +31,24 @@
                 "tests/Feature/WidgetDataChartTest.php"
             ]
         }
-    }
+    },
+    "troubleshooting": [
+        {
+            "symptom": "The chart is refused",
+            "cause": "It has no series, more than 8, or a type other than bar, line or donut",
+            "check": "Count the series and check the chart type",
+            "fix": "Keep between 1 and 8 series and pick a listed type",
+            "evidence": ["src/Data/DataChartInputData.php"]
+        },
+        {
+            "symptom": "A series or value is refused",
+            "cause": "A series has no points or more than 50, or a value is outside -1,000,000 to 1,000,000",
+            "check": "Check the points in each series",
+            "fix": "Keep between 1 and 50 points per series and values within range",
+            "evidence": [
+                "src/Data/ChartSeriesData.php",
+                "src/Data/ChartPointData.php"
+            ]
+        }
+    ]
 }

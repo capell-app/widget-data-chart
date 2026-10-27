@@ -48,6 +48,10 @@ Screenshot contract: `docs/screenshots.json`.
 
 - `DataChartWidget`
 
+### Actions
+
+- `RenderDataChartSvgAction`
+
 ### Data objects
 
 - `ChartPointData`
@@ -103,11 +107,17 @@ This package has no schema impact. It extends Capell through `asset` contributio
 | --- | --- | --- | --- |
 | Package surface is missing after install | Provider or manifest is not loaded | Confirm `capell.json`, package `composer.json`, and provider registration | Reinstall the package, refresh Composer autoload, and clear host caches |
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
+| The chart is refused | It has no series, more than 8, or a type other than bar, line or donut | Count the series and check the chart type | Keep between 1 and 8 series and pick a listed type |
+| A series or value is refused | A series has no points or more than 50, or a value is outside -1,000,000 to 1,000,000 | Check the points in each series | Keep between 1 and 50 points per series and values within range |
 
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
-2. Open a host admin workflow that uses the package extension and verify Data Chart Widget is available.
+2. Open a page, click **Layout builder**, **Add widgets**, then choose **Data Chart**.
+
+## Upgrading
+
+No manual steps between minor versions.
 
 ## Next Steps
 

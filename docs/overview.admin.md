@@ -4,7 +4,7 @@ Data Chart turns small editorial datasets into bar, line, or donut charts withou
 
 ## Do I need to do anything?
 
-Add **Data Chart** in Layout Builder, enter a title, and choose **Bar**, **Line**, or **Donut**. Add one to eight series, each with one to 50 labelled numeric points. Values can range from `-1,000,000` to `1,000,000`. Preview the public page before publishing.
+Add **Data Chart** in Layout Builder, enter a title, and choose **Bar**, **Line**, or **Donut**. Add one to eight series, each with one to 50 labelled numeric points. Bar and line values can range from `-1,000,000` to `1,000,000`, with positive and negative values on opposite sides of zero. Lines connect the points of each series. Donuts require non-negative values and show a separate ring for each series, with each segment proportional to that series' total; zero values have no segment. Existing negative donut data remains in the accessible table with an explanation instead of a misleading graphic. Preview the public page before publishing.
 
 ## Where it shows up
 

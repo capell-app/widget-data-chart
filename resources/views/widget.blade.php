@@ -1,7 +1,12 @@
 @php /** @var \Capell\WidgetDataChart\Data\DataChartRenderData $renderData */ @endphp
 <figure class="capell-data-chart">
     <h2>{{ $renderData->title }}</h2>
-    <div class="capell-data-chart__graphic">{!! $renderData->svg() !!}</div>
+    @php $graphic = $renderData->svg(); @endphp
+    @if ($graphic !== '')
+        <div class="capell-data-chart__graphic">{!! $graphic !!}</div>
+    @else
+        <p>{{ __('capell-widget-data-chart::widget.invalid_donut') }}</p>
+    @endif
     <details>
         <summary>{{ __('capell-widget-data-chart::widget.table') }}</summary>
         <div class="capell-data-chart__table">
