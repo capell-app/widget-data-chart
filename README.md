@@ -2,84 +2,48 @@
 
 <!-- prettier-ignore-start -->
 
-## What This Plugin Adds
-
-Data Chart Widget is an **Available**, **No schema impact** Capell package in the **Capell Foundation** product group. It ships as `capell-app/widget-data-chart` and extends these surfaces: admin, frontend.
+## What It Does
 
 Data Chart adds a Layout Builder widget for bar, line, and donut charts. It renders server-side SVG together with an accessible data table.
 
+- **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/extensions/widget-data-chart).
+- **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/extensions/widget-data-chart).
+- **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`, `lorisleiva/laravel-actions ^2.8`, `spatie/laravel-package-tools ^1.0`.
+- **Install:** `composer require capell-app/widget-data-chart`.
+
 Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.
 
-Status details:
-
-- Status: Available
-- Tier: free
-- Bundle: foundation
-- Composer package: `capell-app/widget-data-chart`
-- Namespace: `Capell\WidgetDataChart`
-- Theme key: not applicable
-
-## Why It Matters
+## Who It Is For
 
 **For developers:** Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.
 
 **For teams:** Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.
 
-## Screens And Workflow
+## Quick Start
 
-Screenshot contract: `docs/screenshots.json`.
+1. Install the package: `composer require capell-app/widget-data-chart`.
+2. Open a page, click **Layout builder**, **Add widgets**, then choose **Data Chart**.
+
+## Configure
+
+This extension works without configuration. There is nothing to set after install.
+
+## Limits And Pitfalls
+
+- Install the required Capell packages at the versions in `composer.json`: `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`.
+- Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
+- Custom write integrations must preserve invalidation for `widget-data-chart` cache tags.
+
+## Screens And Workflow
 
 ![Data Chart public output](docs/screenshots/data-chart-public-output.png)
 
 ![Data Chart fields in Layout Builder](docs/screenshots/data-chart-layout-builder-editor.png)
 
-- Data Chart Widget extension card (marketplace, supplementary documentation fixture).
-- Data Chart fields in Layout Builder (admin, supplementary evidence).
-- Data Chart public output (frontend, required evidence).
-- Data Chart fields in Layout Builder with admin sidebar menu open (admin, supplementary evidence).
-
-## Technical Shape
-
-### Service providers
-
-- `Capell\WidgetDataChart\Providers\WidgetDataChartServiceProvider`
-
-### Filament classes
-
-- `DataChartWidget`
-
-### Actions
-
-- `RenderDataChartSvgAction`
-
-### Data objects
-
-- `ChartPointData`
-- `ChartSeriesData`
-- `DataChartInputData`
-- `DataChartRenderData`
-
-### Manifest contributions
-
-- `asset: Capell\WidgetDataChart\WidgetDataChartContribution`
-- `content-widget: Capell\WidgetDataChart\WidgetDataChartContribution`
-
-### Health checks
-
-- `Capell\WidgetDataChart\Health\WidgetDataChartHealthCheck`
-
-### Blade views
-
-- `packages/widget-data-chart/resources/views/widget.blade.php`
-
-### Cache tags
-
-- `widget-data-chart`
-
-
-## Data Model
-
-This package has no schema impact. It extends Capell through `asset` contributions and `content-widget` contributions instead of declaring package-owned tables.
+- Data Chart Widget extension card (marketplace).
+- Data Chart fields in Layout Builder (admin).
+- Data Chart public output (frontend).
+- Data Chart fields in Layout Builder with admin sidebar menu open (admin).
 
 ## Install Impact
 
@@ -95,12 +59,6 @@ This package has no schema impact. It extends Capell through `asset` contributio
 - Cache tags: `widget-data-chart`.
 - Commands: none declared.
 
-## Common Pitfalls
-
-- Keep required Capell packages on compatible v4 releases: `capell-app/admin`, `capell-app/core`, `capell-app/frontend`, `capell-app/layout-builder`.
-- Keep public Blade and cached HTML free of authoring markers, model IDs, permissions, signed editor URLs, and lazy database queries.
-- Custom write integrations must preserve invalidation for `widget-data-chart` cache tags.
-
 ## Troubleshooting
 
 | Symptom | Likely cause | Check | Fix |
@@ -109,11 +67,6 @@ This package has no schema impact. It extends Capell through `asset` contributio
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
 | The chart is refused | It has no series, more than 8, or a type other than bar, line or donut | Count the series and check the chart type | Keep between 1 and 8 series and pick a listed type |
 | A series or value is refused | A series has no points or more than 50, or a value is outside -1,000,000 to 1,000,000 | Check the points in each series | Keep between 1 and 50 points per series and values within range |
-
-## Quick Start
-
-1. Install the package: `composer require capell-app/widget-data-chart`.
-2. Open a page, click **Layout builder**, **Add widgets**, then choose **Data Chart**.
 
 ## Upgrading
 
@@ -124,7 +77,7 @@ No manual steps between minor versions.
 - [Package docs](docs/README.md)
 - [Overview](docs/overview.md)
 - [Troubleshooting](#troubleshooting)
-- [Screenshot contract](docs/screenshots.json)
+- [Developer reference](docs/reference.md)
 - [Marketplace assets](docs/assets/marketplace/)
 - [Capell content language plan](../../docs/CONTENT_LANGUAGE_PLAN.md)
 - [Capell documentation design system](../../docs/DESIGN_SYSTEM.md)

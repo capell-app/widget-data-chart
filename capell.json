@@ -8,7 +8,7 @@
     "version": "1.0.0",
     "description": "Validated bar, line, and donut charts rendered as server-side SVG with an accessible HTML table.",
     "product": {
-        "group": "Capell Foundation",
+        "group": "Capell Essentials",
         "tier": "free",
         "bundle": "foundation"
     },
@@ -133,7 +133,34 @@
     },
     "marketplace": {
         "summary": "Server-rendered charts with patterns, labels, and accessible tables.",
+        "description": "Turn a small editorial dataset into a bar, line or donut chart that is drawn on the server, with a complete accessible data table beside it and no client charting service. Requires Layout Builder. Limits: one to eight series of up to fifty labelled numbers each; donut charts need non-negative values.",
+        "problem": "Readers can find a set of figures difficult to interpret without a visual comparison.",
+        "outcome": "A page has a chart accompanied by its values in a table.",
+        "faq": [
+            {
+                "question": "Which chart formats are supported?",
+                "answer": "Editors can choose bar, line or donut charts."
+            },
+            {
+                "question": "Can visitors read the underlying values?",
+                "answer": "Yes. Public output includes an accessible data table alongside the chart."
+            },
+            {
+                "question": "How much data fits in a chart?",
+                "answer": "A chart supports 1 to 8 series with 1 to 50 points per series."
+            }
+        ],
         "screenshots": [
+            {
+                "path": "docs/assets/marketplace/listing-data-chart-public-output.png",
+                "alt": "Data Chart public output",
+                "caption": "Data Chart public output"
+            },
+            {
+                "path": "docs/assets/marketplace/listing-data-chart-layout-builder-editor.png",
+                "alt": "Data Chart fields in Layout Builder",
+                "caption": "Data Chart fields in Layout Builder"
+            },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
                 "alt": "Data Chart widget preview",
