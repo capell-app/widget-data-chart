@@ -12,11 +12,11 @@ Editors configure the chart type and editorial data in Layout Builder. The publi
 
 ## Good to know
 
-- This free beta extension belongs to Capell Essentials and requires Layout Builder.
+- This free extension belongs to Capell Essentials and requires Layout Builder.
 - The chart is editorial data, not a connection to an analytics service, spreadsheet, CSV import, or live data source.
 - SVG titles and pattern fills, plus the HTML data table, keep meaning available without relying on colour alone.
 - Labels and values are escaped before rendering; use concise labels because the visual marks expose the point label and value in their accessible title.
 
 ## Screenshot status
 
-Capture the chart configuration and a public chart with pattern-filled marks, accessible point titles, and its expanded data-table disclosure. The committed Marketplace card is interim beta artwork until these two fixture captures are recorded.
+Capture the chart configuration and a public chart with pattern-filled marks, accessible point titles, and its expanded data-table disclosure.

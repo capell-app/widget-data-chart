@@ -1,6 +1,6 @@
 {
     "name": "capell-app/widget-data-chart",
-    "description": "Accessible server-rendered data chart widget for Capell.",
+    "description": "Chart widget for Capell pages that draws typed figures as a bar, line or donut chart with a table of every value. Needs Layout Builder.",
     "type": "library",
     "license": "proprietary",
     "require": {

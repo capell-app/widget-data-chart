@@ -2,27 +2,27 @@
 
 <!-- prettier-ignore-start -->
 
-## What It Does
+The figures in your annual report or your school's results can go on the page as a bar chart, a line chart or a donut. You type the numbers in, and the chart is drawn for you.
 
-Data Chart adds a Layout Builder widget for bar, line, and donut charts. It renders server-side SVG together with an accessible data table.
+There's no spreadsheet to link and nothing updates on its own. One chart holds up to eight sets of figures, say one for each year, with up to fifty numbers in each. Bars can drop below zero to show a loss. Donuts can't show negative figures, and the form says so before you save.
+
+Colours aren't yours to pick. Every chart is drawn in your site's main brand colour. Bars and donut slices are filled in turn with four patterns of fine lines and dots, and each line on a line chart gets its own dash. A chart printed without colour still reads.
+
+Hovering over a bar or slice shows its exact value. Under the chart, a Chart data heading opens a table of every label and number for anyone who wants to quote a figure.
 
 - **Price and availability:** Check current availability and price on the [Capell Marketplace listing](https://capell.app/extensions/widget-data-chart).
 - **Licence:** Check the licence terms on the [Capell Marketplace listing](https://capell.app/extensions/widget-data-chart).
 - **Requires:** `PHP ^8.4`, `capell-app/admin ^1.0`, `capell-app/core ^1.0.66`, `capell-app/frontend ^1.0`, `capell-app/layout-builder ^1.0`, `lorisleiva/laravel-actions ^2.8`, `spatie/laravel-package-tools ^1.0`.
 - **Install:** `composer require capell-app/widget-data-chart`.
 
-Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.
-
-## Who It Is For
-
-**For developers:** Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.
-
-**For teams:** Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.
-
 ## Quick Start
 
 1. Install the package: `composer require capell-app/widget-data-chart`.
 2. Open a page, click **Layout builder**, **Add widgets**, then choose **Data Chart**.
+
+## For Developers
+
+Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.
 
 ## Configure
 
@@ -65,8 +65,6 @@ This extension works without configuration. There is nothing to set after instal
 | --- | --- | --- | --- |
 | Package surface is missing after install | Provider or manifest is not loaded | Confirm `capell.json`, package `composer.json`, and provider registration | Reinstall the package, refresh Composer autoload, and clear host caches |
 | Public output leaks unexpected state | Render data, cache variation, or authoring boundary has regressed | Check public Blade, cache tags, and public-output safety tests | Move data loading out of Blade and rerun the package public-output tests |
-| The chart is refused | It has no series, more than 8, or a type other than bar, line or donut | Count the series and check the chart type | Keep between 1 and 8 series and pick a listed type |
-| A series or value is refused | A series has no points or more than 50, or a value is outside -1,000,000 to 1,000,000 | Check the points in each series | Keep between 1 and 50 points per series and values within range |
 
 ## Upgrading
 

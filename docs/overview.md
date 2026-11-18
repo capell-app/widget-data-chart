@@ -2,6 +2,14 @@
 
 <!-- prettier-ignore-start -->
 
+The figures in your annual report or your school's results can go on the page as a bar chart, a line chart or a donut. You type the numbers in, and the chart is drawn for you.
+
+There's no spreadsheet to link and nothing updates on its own. One chart holds up to eight sets of figures, say one for each year, with up to fifty numbers in each. Bars can drop below zero to show a loss. Donuts can't show negative figures, and the form says so before you save.
+
+Colours aren't yours to pick. Every chart is drawn in your site's main brand colour. Bars and donut slices are filled in turn with four patterns of fine lines and dots, and each line on a line chart gets its own dash. A chart printed without colour still reads.
+
+Hovering over a bar or slice shows its exact value. Under the chart, a Chart data heading opens a table of every label and number for anyone who wants to quote a figure.
+
 ## What it does
 
 Data Chart turns small editorial datasets into bar, line, or donut charts without a client charting service. Each chart is rendered server-side and paired with a complete accessible data table.
@@ -16,14 +24,14 @@ Editors configure the chart type and editorial data in Layout Builder. The publi
 
 ## Good to know
 
-- This free beta extension belongs to Capell Essentials and requires Layout Builder.
+- This free extension belongs to Capell Essentials and requires Layout Builder.
 - The chart is editorial data, not a connection to an analytics service, spreadsheet, CSV import, or live data source.
 - SVG titles and pattern fills, plus the HTML data table, keep meaning available without relying on colour alone.
 - Labels and values are escaped before rendering; use concise labels because the visual marks expose the point label and value in their accessible title.
 
 ## Screenshot status
 
-Capture the chart configuration and a public chart with pattern-filled marks, accessible point titles, and its expanded data-table disclosure. The committed Marketplace card is interim beta artwork until these two fixture captures are recorded.
+Capture the chart configuration and a public chart with pattern-filled marks, accessible point titles, and its expanded data-table disclosure.
 
 ---
 

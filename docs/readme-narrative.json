@@ -1,20 +1,4 @@
 {
-    "whatThisPluginAdds": {
-        "text": "Data Chart adds a Layout Builder widget for bar, line, and donut charts. It renders server-side SVG together with an accessible data table.",
-        "evidence": [
-            "src/Data/DataChartRenderData.php",
-            "resources/views/widget.blade.php",
-            "tests/Feature/WidgetDataChartTest.php"
-        ]
-    },
-    "surfaceOutcome": {
-        "text": "Editors enter chart labels and values in Layout Builder, and visitors receive both the visual chart and its tabular values in public output.",
-        "evidence": [
-            "capell.json",
-            "src/Filament/DataChartWidget.php",
-            "resources/views/widget.blade.php"
-        ]
-    },
     "whyItMatters": {
         "developers": {
             "text": "Typed render data feeds a server-rendered Blade view, and focused tests check the generated SVG and output safety.",
@@ -23,32 +7,6 @@
                 "src/Providers/WidgetDataChartServiceProvider.php",
                 "tests/Feature/WidgetDataChartTest.php"
             ]
-        },
-        "teams": {
-            "text": "Teams can explain small datasets visually while keeping the underlying values available to readers who do not use the chart graphic.",
-            "evidence": [
-                "resources/views/widget.blade.php",
-                "tests/Feature/WidgetDataChartTest.php"
-            ]
         }
-    },
-    "troubleshooting": [
-        {
-            "symptom": "The chart is refused",
-            "cause": "It has no series, more than 8, or a type other than bar, line or donut",
-            "check": "Count the series and check the chart type",
-            "fix": "Keep between 1 and 8 series and pick a listed type",
-            "evidence": ["src/Data/DataChartInputData.php"]
-        },
-        {
-            "symptom": "A series or value is refused",
-            "cause": "A series has no points or more than 50, or a value is outside -1,000,000 to 1,000,000",
-            "check": "Check the points in each series",
-            "fix": "Keep between 1 and 50 points per series and values within range",
-            "evidence": [
-                "src/Data/ChartSeriesData.php",
-                "src/Data/ChartPointData.php"
-            ]
-        }
-    ]
+    }
 }

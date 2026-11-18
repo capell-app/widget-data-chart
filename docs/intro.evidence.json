@@ -1,0 +1,51 @@
+[
+    {
+        "claim": "Bar, line or donut chart types",
+        "evidence": [
+            "src/Data/DataChartInputData.php",
+            "src/Filament/DataChartWidget.php"
+        ]
+    },
+    {
+        "claim": "Up to eight sets of up to fifty figures, typed in by hand",
+        "evidence": [
+            "src/Data/DataChartInputData.php",
+            "src/Data/ChartSeriesData.php",
+            "src/Filament/DataChartWidget.php"
+        ]
+    },
+    {
+        "claim": "No spreadsheet link and no automatic updates",
+        "evidence": ["src/Filament/DataChartWidget.php"]
+    },
+    {
+        "claim": "Bars can go below zero",
+        "evidence": [
+            "src/Data/ChartPointData.php",
+            "src/Actions/RenderDataChartSvgAction.php"
+        ]
+    },
+    {
+        "claim": "The form refuses negative figures for donuts and explains why",
+        "evidence": ["src/Filament/DataChartWidget.php"]
+    },
+    {
+        "claim": "Drawn in the theme's primary colour, with no colour choice; bars and donut slices cycle through four hatching and dot patterns",
+        "evidence": [
+            "src/Actions/RenderDataChartSvgAction.php",
+            "resources/dist/widget.css"
+        ]
+    },
+    {
+        "claim": "Each line uses a different dash pattern",
+        "evidence": ["src/Actions/RenderDataChartSvgAction.php"]
+    },
+    {
+        "claim": "Hovering shows the exact value",
+        "evidence": ["src/Actions/RenderDataChartSvgAction.php"]
+    },
+    {
+        "claim": "A Chart data section under the chart opens a table of every value",
+        "evidence": ["resources/views/widget.blade.php"]
+    }
+]

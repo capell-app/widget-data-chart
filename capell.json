@@ -6,7 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
-    "description": "Validated bar, line, and donut charts rendered as server-side SVG with an accessible HTML table.",
+    "description": "Figures you type in become a bar, line or donut chart on your page, with a full table of the numbers underneath.",
     "product": {
         "group": "Capell Essentials",
         "tier": "free",
@@ -59,7 +59,7 @@
     },
     "settings": [],
     "permissions": [],
-    "capabilities": ["frontend.public-static"],
+    "capabilities": ["frontend-surface"],
     "security": {
         "riskTier": "low",
         "publicSurface": {
@@ -132,41 +132,63 @@
         "privateDocsRequested": false
     },
     "marketplace": {
-        "summary": "Server-rendered charts with patterns, labels, and accessible tables.",
-        "description": "Turn a small editorial dataset into a bar, line or donut chart that is drawn on the server, with a complete accessible data table beside it and no client charting service. Requires Layout Builder. Limits: one to eight series of up to fifty labelled numbers each; donut charts need non-negative values.",
-        "problem": "Readers can find a set of figures difficult to interpret without a visual comparison.",
-        "outcome": "A page has a chart accompanied by its values in a table.",
+        "summary": "Bar, line and donut charts from typed figures, drawn in your site's main colour with patterns and a table of every value.",
+        "description": "Type your figures into the form and they appear on the page as a bar, line or donut chart. A chart takes up to eight sets of up to fifty numbers each, and bars can dip below zero. Donuts refuse negative figures before you save. Charts use your site's main colour, with patterns on bars and slices and a different dash for each line, so they still read in black and white. Hovering shows an exact value, and a table of every number opens underneath. It needs Layout Builder to place it on a page.",
+        "problem": "A table of figures feels flat, and outside chart tools mean spreadsheets and extra accounts.",
+        "outcome": "Visitors see your figures as a clear chart and can open a table to quote any exact number.",
         "faq": [
             {
-                "question": "Which chart formats are supported?",
-                "answer": "Editors can choose bar, line or donut charts."
+                "question": "Which kinds of chart can I make?",
+                "answer": "Bar, line or donut. Bars can go below zero to show a loss, but a donut cannot show negative figures and the form tells you before you save."
             },
             {
-                "question": "Can visitors read the underlying values?",
-                "answer": "Yes. Public output includes an accessible data table alongside the chart."
+                "question": "Does the chart update from a spreadsheet?",
+                "answer": "No. You type the numbers in, and nothing updates on its own."
             },
             {
-                "question": "How much data fits in a chart?",
-                "answer": "A chart supports 1 to 8 series with 1 to 50 points per series."
+                "question": "How much data fits in one chart?",
+                "answer": "Up to eight sets of figures, with up to fifty numbers in each."
+            },
+            {
+                "question": "Can I choose the chart colours?",
+                "answer": "No. Charts follow your site's main brand colour, and bars, slices and lines are told apart by pattern, so a black and white printout still reads."
+            },
+            {
+                "question": "Can visitors see the exact numbers?",
+                "answer": "Yes. Hovering over a bar or slice shows its value, and a Chart data heading under the chart opens a table of every label and number."
             }
         ],
         "screenshots": [
             {
                 "path": "docs/assets/marketplace/listing-data-chart-public-output.png",
-                "alt": "Data Chart public output",
-                "caption": "Data Chart public output"
+                "alt": "Three patterned bars of rising height under a Workshop attendance heading, with a closed Chart data line below",
+                "caption": "Visitors see the chart first and can open Chart data to read every figure."
             },
             {
                 "path": "docs/assets/marketplace/listing-data-chart-layout-builder-editor.png",
-                "alt": "Data Chart fields in Layout Builder",
-                "caption": "Data Chart fields in Layout Builder"
+                "alt": "Page editor with a chart block open, showing a title, a Bar type, a Visitors series and an April point of value 84",
+                "caption": "Each chart has a type, one or more sets of figures and a label and value for every point."
             },
             {
                 "path": "docs/assets/marketplace/extension-card.jpg",
-                "alt": "Data Chart widget preview",
-                "caption": "Data Chart widget"
+                "alt": "Marketplace card for the Data Chart widget with a bar chart and an editor screen and the steps Install, Use and Evolve",
+                "caption": "Card used for the widget's Marketplace listing."
             }
         ],
         "categories": ["foundation", "frontend", "data"]
+    },
+    "contributionTraceability": {
+        "contributions": [
+            {
+                "type": "asset",
+                "key": "resource-group:capell-app.widget-data-chart",
+                "providerBucket": "runtime"
+            },
+            {
+                "type": "content-widget",
+                "key": "capell-app.data-chart",
+                "providerBucket": "runtime"
+            }
+        ]
     }
 }

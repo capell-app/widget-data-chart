@@ -6,7 +6,7 @@ Developer reference for `capell-app/widget-data-chart`. Start with the [README](
 
 ## Package Details
 
-Data Chart Widget is an **Available**, **No schema impact** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-data-chart` and extends these surfaces: admin, frontend.
+Data Chart Widget is an **Available** Capell package in the **Capell Essentials** product group. It ships as `capell-app/widget-data-chart` and extends these surfaces: admin, frontend.
 
 - Status: Available
 - Tier: free
