@@ -133,7 +133,7 @@
     },
     "marketplace": {
         "summary": "Bar, line and donut charts from typed figures, drawn in your site's main colour with patterns and a table of every value.",
-        "description": "Type your figures into the form and they appear on the page as a bar, line or donut chart. A chart takes up to eight sets of up to fifty numbers each, and bars can dip below zero. Donuts refuse negative figures before you save. Charts use your site's main colour, with patterns on bars and slices and a different dash for each line, so they still read in black and white. Hovering shows an exact value, and a table of every number opens underneath. It needs Layout Builder to place it on a page.",
+        "description": "Type your figures into the form and they appear on the page as a bar, line or donut chart. A chart takes one to eight sets of up to fifty labelled numbers each, and bars can dip below zero. Donuts refuse negative figures before you save. Charts use your site's main colour, with patterns on bars and slices and a different dash for each line, so they still read in black and white. Hovering shows an exact value, and a table of every number opens underneath. It needs Layout Builder to place it on a page.",
         "problem": "A table of figures feels flat, and outside chart tools mean spreadsheets and extra accounts.",
         "outcome": "Visitors see your figures as a clear chart and can open a table to quote any exact number.",
         "faq": [

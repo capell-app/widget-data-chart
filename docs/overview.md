@@ -29,10 +29,6 @@ Editors configure the chart type and editorial data in Layout Builder. The publi
 - SVG titles and pattern fills, plus the HTML data table, keep meaning available without relying on colour alone.
 - Labels and values are escaped before rendering; use concise labels because the visual marks expose the point label and value in their accessible title.
 
-## Screenshot status
-
-Capture the chart configuration and a public chart with pattern-filled marks, accessible point titles, and its expanded data-table disclosure.
-
 ---
 
 For developers: see the [README](../README.md).
