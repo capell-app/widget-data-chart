@@ -6,6 +6,7 @@
     "kind": "package",
     "capellApiVersion": "^1.0",
     "version": "1.0.0",
+    "launchStatus": "preview",
     "description": "Figures you type in become a bar, line or donut chart on your page, with a full table of the numbers underneath.",
     "product": {
         "group": "Capell Essentials",
